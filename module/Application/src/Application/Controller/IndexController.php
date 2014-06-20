@@ -17,7 +17,7 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-    	
+    	/*
     	$whatsapp = $this->getServiceLocator()->get("Whatsapp\Service\Whatsapp");
     	//$whatsapp->sendMessageImage("5511958439600", "http://autos.vocedeolhoemtudo.com.br/wp-content/gallery/carro-gt/carro-gt-13.jpg");
     	//$whatsapp->sendMessage("5511958439600", null);
@@ -27,6 +27,7 @@ class IndexController extends AbstractActionController
     	print "<hr/>";
     	@$teste = $whatsapp->checkCredentials("5511958439600");
     	print $teste;
+    	*/
         return new ViewModel();
     }
     

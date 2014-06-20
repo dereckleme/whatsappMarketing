@@ -959,7 +959,7 @@
                 {
                     "name": "Martin Shwalbe",
                     "email": "martin.shwalbe@gmail.com",
-                    "homepage": "http://hounddog.github.io"
+                    "homepage": "http://hounddog.github.com"
                 }
             ],
             "description": "Zend Framework 2 Module that provides Doctrine Data-Fixture functionality",
@@ -1096,12 +1096,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/ZendDeveloperTools.git",
-                "reference": "8907edf3a03ae0ac761b43e33b3629ac1b6c3cf3"
+                "reference": "da8a8b232b1b43a43c899f9acf4472ef006b8827"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZendDeveloperTools/zipball/8907edf3a03ae0ac761b43e33b3629ac1b6c3cf3",
-                "reference": "8907edf3a03ae0ac761b43e33b3629ac1b6c3cf3",
+                "url": "https://api.github.com/repos/zendframework/ZendDeveloperTools/zipball/da8a8b232b1b43a43c899f9acf4472ef006b8827",
+                "reference": "da8a8b232b1b43a43c899f9acf4472ef006b8827",
                 "shasum": ""
             },
             "require": {
@@ -1149,7 +1149,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2014-05-06 03:29:18"
+            "time": "2014-06-18 08:28:36"
         },
         {
             "name": "zendframework/zenddiagnostics",
