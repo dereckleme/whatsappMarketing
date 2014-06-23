@@ -9,7 +9,7 @@ return array(
 										'port'     => '3306',
 										'user'     => 'root',
 										'password' => '',
-										'dbname'   => 'BaseDeDados',
+										'dbname'   => 'whatsapp',
 								    'charset' => 'utf8',
 								    'driverOptions' => array(
 								    		1002=>'SET NAMES utf8'
