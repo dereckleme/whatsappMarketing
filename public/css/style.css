@@ -1,12 +1,27 @@
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
-
+   }
+#header {float: left; width: 100%; }
+#header { min-width: 960px;}   
+#menu{  width: 960px; margin: 0 auto; background-color:#F8F8FF;padding:5px 5px 5px 5px}
 .zf-green {
     color: #68b604;
 }
-
+#infoPerfil{
+	float:right;
+	color:blue;
+	padding-top:3px;
+}
+#content { float: left; width: 100%;  }
+#content { min-width: 960px;}
+#conteudo{
+	width: 970px; margin: 0 auto; margin-top:5px;
+}
+#menuLeft{
+	width:230px;background-color:#F8F8FF;float:left;
+}
+#contentController{
+	float:left;background-color:#F8F8FF;width:725px;margin-left:5px;padding:5px 5px 5px 5px
+}
 .btn-success {
   background-color: #57a900;
   background-image: -moz-linear-gradient(top, #70d900, #57a900);
@@ -28,10 +43,4 @@ body {
 
 .btn-success:active, .btn-success.active {
   background-color: #57a900;
-}
-
-div.container a.brand {
-    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
-    margin-left: 0;
-    padding: 8px 20px 12px 40px;
 }

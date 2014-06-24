@@ -1,0 +1,67 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+        								->prependFile($this->basePath() . '/js/bootstrap.file-input.js')
+        							  ->prependFile($this->basePath() . '/js/sistema.js')
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+
+    </head>
+    <body>
+    	<div id="geral">
+			<div id="header">
+				<div id="menu">
+					<div class="btn-group">
+					  <button class="btn"><i class="icon-map-marker"></i> Home</button>
+					  <button class="btn"><i class="icon-remove"></i> Sair</button>
+					</div>
+					<div id="infoPerfil">
+						Olá Dereck seja bem vindo, você possue 20 créditos de envio.
+					</div>
+				</div>
+			</div>
+			<div id="content">
+				<div id="conteudo">
+					<div id="menuLeft">
+						<ul class="nav nav-list">
+                <li class="nav-header"><i class="icon-star"></i>Pontos da Conta</li>
+                <li ><a href="<?=$this->url("resulmoConta")?>">Resulmo da Conta</a></li>
+                <li><a href="#">Transferência de pontos</a></li>
+                <li><a href="#">Transações de pontos</a></li>
+                <li class="nav-header"><i class="icon-envelope"></i>Enviar Mensagens</li>
+                <li class="active"><a href="<?=$this->url("criarCampanha")?>">Criar Campanhas</a></li>
+                <li ><a href="<?=$this->url("enviarMensagem")?>">Mensagem Simples</a></li>
+                <li><a href="<?=$this->url("enviarCampanhas")?>">Enviar Campanhas</a></li>
+              
+              	<li class="nav-header"><i class="icon-list"></i>Gerenciar Contatos</li>
+              	<li><a href="#">Minhas Listas</a></li>
+              	<li><a href="#">Criar Listas de contatos</a></li>
+              	
+              	<li class="nav-header"><i class="icon-user"></i>Conta do Perfil</li>
+              	<li><a href="#">Ver Perfil</a></li>
+              	<li><a href="#">Editar Perfil</a></li>
+              </ul>
+					</div>
+					<div id="contentController">
+						<?php echo $this->content; ?>
+					</div>
+				</div>
+			</div>
+		</div>	
+        
+    </body>
+</html>
