@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Whatsapp Marketing'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
 
@@ -15,6 +15,7 @@
 
         <!-- Scripts -->
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+       									 ->prependFile($this->basePath() . '/js/jquery.maskedinput.min.js')
         								->prependFile($this->basePath() . '/js/bootstrap.file-input.js')
         							  ->prependFile($this->basePath() . '/js/sistema.js')
                                       ->prependFile($this->basePath() . '/js/bootstrap.min.js')
@@ -30,7 +31,7 @@
 					  <button class="btn"><i class="icon-remove"></i> Sair</button>
 					</div>
 					<div id="infoPerfil">
-						Olá Dereck seja bem vindo, você possue 20 créditos de envio.
+						<span class="label">Olá Dereck seja bem vindo</span> <span class="label label-info">N° Créditos: 20</span>
 					</div>
 				</div>
 			</div>
@@ -39,21 +40,21 @@
 					<div id="menuLeft">
 						<ul class="nav nav-list">
                 <li class="nav-header"><i class="icon-star"></i>Pontos da Conta</li>
-                <li ><a href="<?=$this->url("resulmoConta")?>">Resulmo da Conta</a></li>
-                <li><a href="#">Transferência de pontos</a></li>
-                <li><a href="#">Transações de pontos</a></li>
+                <li <?if($this->setterMenu == "resulmoConta") print 'class="active"';?>><a href="<?=$this->url("resulmoConta")?>">Resulmo da Conta</a></li>
+                <!--<li><a href="#">Transferência de pontos</a></li>
+                <li><a href="#">Transações de pontos</a></li>  -->
                 <li class="nav-header"><i class="icon-envelope"></i>Enviar Mensagens</li>
-                <li class="active"><a href="<?=$this->url("criarCampanha")?>">Criar Campanhas</a></li>
-                <li ><a href="<?=$this->url("enviarMensagem")?>">Mensagem Simples</a></li>
-                <li><a href="<?=$this->url("enviarCampanhas")?>">Enviar Campanhas</a></li>
+                <li <?if($this->setterMenu == "criarCampanha") print 'class="active"';?>><a href="<?=$this->url("criarCampanha")?>">Criar Campanhas</a></li>
+                <li <?if($this->setterMenu == "enviarMensagem") print 'class="active"';?>><a href="<?=$this->url("enviarMensagem")?>">Mensagem Simples</a></li>
+                <li <?if($this->setterMenu == "enviarCampanhas") print 'class="active"';?>><a href="<?=$this->url("enviarCampanhas")?>">Enviar Campanhas</a></li>
               
               	<li class="nav-header"><i class="icon-list"></i>Gerenciar Contatos</li>
-              	<li><a href="#">Minhas Listas</a></li>
-              	<li><a href="#">Criar Listas de contatos</a></li>
+              	<li <?if($this->setterMenu == "minhasListas") print 'class="active"';?>><a href="<?=$this->url("minhasListas")?>">Minhas Listas</a></li>
+              	<li <?if($this->setterMenu == "criarLista") print 'class="active"';?>><a href="<?=$this->url("criarLista")?>">Criar Listas de contatos</a></li>
               	
               	<li class="nav-header"><i class="icon-user"></i>Conta do Perfil</li>
-              	<li><a href="#">Ver Perfil</a></li>
-              	<li><a href="#">Editar Perfil</a></li>
+              	<li <?if($this->setterMenu == "verPerfil") print 'class="active"';?>><a href="<?=$this->url("verPerfil")?>">Ver Perfil</a></li>
+              	<li <?if($this->setterMenu == "editarPerfil") print 'class="active"';?>><a href="<?=$this->url("editarPerfil")?>">Editar Perfil</a></li>
               </ul>
 					</div>
 					<div id="contentController">
@@ -62,6 +63,14 @@
 				</div>
 			</div>
 		</div>	
-        
+        <div id="footer">
+				<div id="menu_footer">
+					<ul class="mn_footer">
+						<li>WHATSAPP COPYRIGHT © 2014</li>
+						<li>TODOS OS DIREITOS RESERVADOS</li>
+					</ul>
+				</div>
+
+			    </div>
     </body>
 </html>

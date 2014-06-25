@@ -10,8 +10,10 @@ return array(
         'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
-        'Application',
-        'Whatsapp'
+        'Base',
+        'Whatsapp',
+        'Usuario',
+        'Produto'
     ),
     'module_listener_options' => array(
         'module_paths' => array(

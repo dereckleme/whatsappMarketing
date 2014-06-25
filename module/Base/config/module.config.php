@@ -20,46 +20,7 @@ return array(
                     ),
                 ),
             ),
-        	'criarCampanha' => array(
-        				'type' => 'Zend\Mvc\Router\Http\Literal',
-        				'options' => array(
-        						'route'    => '/criarCampanhas',
-        						'defaults' => array(
-        								'controller' => 'Base\Controller\Index',
-        								'action'     => 'criarCampanhas',
-        						),
-        				),
-        		),
-        		'enviarMensagem' => array(
-        				'type' => 'Zend\Mvc\Router\Http\Literal',
-        				'options' => array(
-        						'route'    => '/enviarMensagem',
-        						'defaults' => array(
-        								'controller' => 'Base\Controller\Index',
-        								'action'     => 'enviarMensagem',
-        						),
-        				),
-        		),
-        		'enviarCampanhas' => array(
-        				'type' => 'Zend\Mvc\Router\Http\Literal',
-        				'options' => array(
-        						'route'    => '/enviarCampanhas',
-        						'defaults' => array(
-        								'controller' => 'Base\Controller\Index',
-        								'action'     => 'enviarCampanhas',
-        						),
-        				),
-        		),
-        		'resulmoConta' => array(
-        				'type' => 'Zend\Mvc\Router\Http\Literal',
-        				'options' => array(
-        						'route'    => '/resulmoConta',
-        						'defaults' => array(
-        								'controller' => 'Base\Controller\Index',
-        								'action'     => 'resulmoConta',
-        						),
-        				),
-        		),
+        	
         ),
     ),
     'service_manager' => array(

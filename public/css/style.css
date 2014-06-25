@@ -44,3 +44,9 @@ body {
 .btn-success:active, .btn-success.active {
   background-color: #57a900;
 }
+/****************************FOOTER******************************/
+#footer { width: 100%; float: left; background:#D8D8D8 ; border-top: 7px solid #C0C0C0}
+#footer { min-width: 1024px;}
+#menu_footer{  width: 1024px; margin: 0 auto; }
+ul.mn_footer{ text-align: center}
+ul.mn_footer li {display: inline-table; padding: 10px 5px;  }
