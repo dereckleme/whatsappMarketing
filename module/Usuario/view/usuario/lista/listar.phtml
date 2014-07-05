@@ -1,0 +1,71 @@
+<div class="page-header">
+  <h1>Minhas Listas<small> Nessa sessão você visualiza suas listas de forma completa e detalhada.</small></h1>
+</div>
+<div class="alert alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Atenção!</strong> Só após você validar sua lista você pode envia-las para seus clientes, para validar click no botão validar.
+</div> 
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Lista Válida</strong> é uma forma de garantir que suas mensagens serão entrege efetivamente para seus clientes.
+</div>
+<table class="table table-condensed">
+ 	<tr>
+ 		<td><span class="label">ID</span></td>
+ 		<td><span class="label label-info">Titulo da lista</span></td>
+ 		<td><center><span class="label label-warning">Contatos</span></center></td>
+ 		<td><center><span class="label btn-info">Válidos</span></center></td>
+ 		<td><span class="label label-inverse">Ações</span></td>
+ 	</tr>
+ 	<?php 
+ 		foreach($this->data AS $linha)
+ 		{
+ 	?>
+ 	<tr class="info">
+ 		<td><?=$linha->getIdlistas()?></td>
+ 		<td><?=$linha->getTitulo()?></td>
+ 		<td><center><?=count($linha->getListaTelefones())?></center></td>
+ 		<td><center><?php
+ 		$valido = 0; 
+ 			foreach($linha->getListaTelefones() AS $numero)
+ 			{
+ 				if($numero->getValido() == 1)
+ 				{
+ 					$valido++;
+ 				}
+ 			}
+ 			print $valido;
+ 		?></center></td>
+ 		<td><?php 
+ 			if($linha->getValidacao() == 0)
+ 			{
+ 		?><button rel="<?=$linha->getIdlistas()?>" class="btn btn-mini btn-inverse validarLista" type="button">Validar</button><?php 
+ 			}else if($linha->getValidacao() ==1)
+ 			{
+ 				?>
+ 				<button rel="<?=$linha->getIdlistas()?>" class="btn btn-mini btn-success" type="button">Validando Lista</button>
+ 				<?php
+ 			}
+ 			else if($linha->getValidacao() == 2)
+ 			{
+ 				?>
+ 				<button rel="<?=$linha->getIdlistas()?>" class="btn btn-mini btn-danger validarLista" type="button">Re-Validar</button>
+ 				<?php
+ 			}
+ 		?> <button class="btn btn-mini btn-primary" type="button">Download</button> <button class="btn btn-mini btn-warning" type="button">Editar</button> <button class="btn btn-mini btn-danger" type="button">Excluir</button></td>
+ 	</tr>
+ 	<?php 
+ 		}
+ 	?>
+</table>
+<?php 
+	if(!$this->data)
+	{
+		?>
+		<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Atenção!</strong> Você não tem cadastrado uma lista de contato, para cadastrar acesse: <a href="<?=$this->url("criarLista")?>">Criar Lista de Contatos.</a>
+</div>
+		<?php 
+	}
+?>

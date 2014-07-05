@@ -15,19 +15,8 @@ return array(
         				'options' => array(
         						'route'    => '/criarCampanhas',
         						'defaults' => array(
-        								'controller' => 'Produto\Controller\Index',
-        								'action'     => 'criarCampanhas',
-        						),
-        				),
-        		),
-
-        		'enviarMensagem' => array(
-        				'type' => 'Zend\Mvc\Router\Http\Literal',
-        				'options' => array(
-        						'route'    => '/enviarMensagem',
-        						'defaults' => array(
-        								'controller' => 'Produto\Controller\Index',
-        								'action'     => 'enviarMensagem',
+        								'controller' => 'Produto\Controller\Campanha',
+        								'action'     => 'inserir',
         						),
         				),
         		),
@@ -36,8 +25,8 @@ return array(
         				'options' => array(
         						'route'    => '/enviarCampanhas',
         						'defaults' => array(
-        								'controller' => 'Produto\Controller\Index',
-        								'action'     => 'enviarCampanhas',
+        								'controller' => 'Produto\Controller\Campanha',
+        								'action'     => 'listar',
         						),
         				),
         		),
@@ -54,7 +43,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Produto\Controller\Index' => 'Produto\Controller\IndexController'            
+            'Produto\Controller\Campanha' => 'Produto\Controller\CampanhaController'
         ),
     ),
     // Placeholder for console routes

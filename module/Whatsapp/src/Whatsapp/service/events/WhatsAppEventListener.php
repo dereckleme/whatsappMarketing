@@ -1,4 +1,5 @@
 <?php
+namespace Whatsapp\Service\events;
 /**
  * @file
  * Event class to received WhatsApp related events.

@@ -1671,7 +1671,6 @@ class WhatsProt
                 "last" => $last ? "true" : "false"
             ), $users, null)
         ), null);
-
         $this->sendNode($node);
 
         return $id;

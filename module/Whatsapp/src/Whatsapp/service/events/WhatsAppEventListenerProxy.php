@@ -1,5 +1,5 @@
 <?php
-
+namespace Whatsapp\Service\events;
 /*
  * This class may be helpful if you want to handle all events the same way.
  */

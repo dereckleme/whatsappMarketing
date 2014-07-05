@@ -14,6 +14,7 @@
                         ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
 
         <!-- Scripts -->
+         <script>var basePatch  = '<?=$this->basePath()?>'</script>
         <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
        									 ->prependFile($this->basePath() . '/js/jquery.maskedinput.min.js')
         								->prependFile($this->basePath() . '/js/bootstrap.file-input.js')
@@ -23,15 +24,27 @@
 
     </head>
     <body>
+    <div id="popup-login">
+	<span>
+	 <img src="/siteBouts/www/img/load.gif">
+	 <p>Carregando Aguarde...</p>
+	</span>
+</div>
+    
     	<div id="geral">
 			<div id="header">
 				<div id="menu">
 					<div class="btn-group">
-					  <button class="btn"><i class="icon-map-marker"></i> Home</button>
-					  <button class="btn"><i class="icon-remove"></i> Sair</button>
+					  <a href="<?=$this->url("enviarMensagem")?>"> <button class="btn"><i class="icon-map-marker"></i> Home</button></a>
+					 <a href="<?=$this->url("sair")?>"> <button class="btn"><i class="icon-remove"></i> Sair</button></a>
 					</div>
 					<div id="infoPerfil">
-						<span class="label">Olá Dereck seja bem vindo</span> <span class="label label-info">N° Créditos: 20</span>
+						<span class="label">Olá <?
+						if($this->infoUser)
+						{
+						print $this->infoUser->getLogin();
+						}
+						?> seja bem vindo</span> <span class="label label-info">N° Créditos: 20</span>
 					</div>
 				</div>
 			</div>
@@ -47,7 +60,7 @@
                 <li <?if($this->setterMenu == "criarCampanha") print 'class="active"';?>><a href="<?=$this->url("criarCampanha")?>">Criar Campanhas</a></li>
                 <li <?if($this->setterMenu == "enviarMensagem") print 'class="active"';?>><a href="<?=$this->url("enviarMensagem")?>">Mensagem Simples</a></li>
                 <li <?if($this->setterMenu == "enviarCampanhas") print 'class="active"';?>><a href="<?=$this->url("enviarCampanhas")?>">Enviar Campanhas</a></li>
-              
+                 <li><a href="<?=$this->url("enviarCampanhas")?>">Gerenciar Campanhas</a></li>             
               	<li class="nav-header"><i class="icon-list"></i>Gerenciar Contatos</li>
               	<li <?if($this->setterMenu == "minhasListas") print 'class="active"';?>><a href="<?=$this->url("minhasListas")?>">Minhas Listas</a></li>
               	<li <?if($this->setterMenu == "criarLista") print 'class="active"';?>><a href="<?=$this->url("criarLista")?>">Criar Listas de contatos</a></li>
@@ -58,6 +71,7 @@
               </ul>
 					</div>
 					<div id="contentController">
+						<div class="alert" style="display: none"></div>
 						<?php echo $this->content; ?>
 					</div>
 				</div>

@@ -1,6 +1,7 @@
 <?php
 namespace Whatsapp;
 use Whatsapp\Service\WhatsProt;
+use Whatsapp\Service\Envio;
 class Module
 {
     public function getConfig()
@@ -28,10 +29,15 @@ class Module
     						$sender = 	"5511949962945";
     						$imei = 	"358700041496533";
     						$password = "/ZPakne3xFohdaoGbLwBLi85e5g=";
-    						$whatsapp = new WhatsProt($sender, $imei, $nickname, TRUE);
+    						$whatsapp = new WhatsProt($sender, $imei, $nickname, false);
     						$whatsapp->connect();
     						$whatsapp->loginWithPassword($password);
     						return $whatsapp;
+    					},
+    					'Whatsapp\Service\Envio' => function($sm)
+    					{
+    						$Envio = new Envio($sm->get('Doctrine\ORM\EntityManager'));
+    						return $Envio;
     					}
     			),
     	);

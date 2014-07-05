@@ -10,13 +10,24 @@
 return array(
     'router' => array(
         'routes' => array(
-        		'resulmoConta' => array(
+
+        		'enviarMensagem' => array(
         				'type' => 'Zend\Mvc\Router\Http\Literal',
         				'options' => array(
-        						'route'    => '/resulmoConta',
+        						'route'    => '/enviarMensagens',
         						'defaults' => array(
-        								'controller' => 'Usuario\Controller\Index',
-        								'action'     => 'resulmoConta',
+        								'controller' => 'Usuario\Controller\Mensagens',
+        								'action'     => 'index',
+        						),
+        				),
+        		),
+        		'adicionaFilaMensagem' => array(
+        				'type' => 'Zend\Mvc\Router\Http\Literal',
+        				'options' => array(
+        						'route'    => '/adicionaFilaMensagem',
+        						'defaults' => array(
+        								'controller' => 'Usuario\Controller\Mensagens',
+        								'action'     => 'enviar',
         						),
         				),
         		),
@@ -25,8 +36,20 @@ return array(
         				'options' => array(
         						'route'    => '/minhasListas',
         						'defaults' => array(
-        								'controller' => 'Usuario\Controller\Index',
-        								'action'     => 'minhasListas',
+        								'controller' => 'Usuario\Controller\Lista',
+        								'action'     => 'listar',
+        						),
+        				),
+        				'may_terminate' => true,
+        				'child_routes' => array(
+        						'validar' => array(
+        								'type'    => 'Literal',
+        								'options' => array(
+        										'route'    => '/validar',
+        										'defaults' => array(
+        											'action'     => 'validar'
+        										),
+        								),
         						),
         				),
         		),
@@ -35,8 +58,18 @@ return array(
         				'options' => array(
         						'route'    => '/criarLista',
         						'defaults' => array(
-        								'controller' => 'Usuario\Controller\Index',
-        								'action'     => 'criarLista',
+        								'controller' => 'Usuario\Controller\Lista',
+        								'action'     => 'inserir',
+        						),
+        				),
+        		),
+        		'resulmoConta' => array(
+        				'type' => 'Zend\Mvc\Router\Http\Literal',
+        				'options' => array(
+        						'route'    => '/resulmoConta',
+        						'defaults' => array(
+        								'controller' => 'Usuario\Controller\Conta',
+        								'action'     => 'resulmoConta',
         						),
         				),
         		),
@@ -45,8 +78,8 @@ return array(
         				'options' => array(
         						'route'    => '/verPerfil',
         						'defaults' => array(
-        								'controller' => 'Usuario\Controller\Index',
-        								'action'     => 'verPerfil',
+        								'controller' => 'Usuario\Controller\Conta',
+        								'action'     => 'listar',
         						),
         				),
         		),
@@ -55,11 +88,31 @@ return array(
         				'options' => array(
         						'route'    => '/editarPerfil',
         						'defaults' => array(
-        								'controller' => 'Usuario\Controller\Index',
-        								'action'     => 'editarPerfil',
+        								'controller' => 'Usuario\Controller\Conta',
+        								'action'     => 'editar',
         						),
         				),
         		),
+        		'login' => array(
+        				'type' => 'Zend\Mvc\Router\Http\Literal',
+        				'options' => array(
+        						'route'    => '/login',
+        						'defaults' => array(
+        								'controller' => 'Usuario\Controller\Conta',
+        								'action'     => 'login',
+        						),
+        				),
+        		),
+        		'sair' => array(
+        				'type' => 'Zend\Mvc\Router\Http\Literal',
+        				'options' => array(
+        						'route'    => '/sair',
+        						'defaults' => array(
+        								'controller' => 'Usuario\Controller\Conta',
+        								'action'     => 'logout',
+        						),
+        				),
+        		)
         ),
     ),
     'service_manager' => array(
@@ -73,7 +126,9 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Usuario\Controller\Index' => 'Usuario\Controller\IndexController'            
+            'Usuario\Controller\Conta' => 'Usuario\Controller\ContaController',
+            'Usuario\Controller\Lista' => 'Usuario\Controller\ListaController',
+            'Usuario\Controller\Mensagens' => 'Usuario\Controller\MensagensController'
         ),
     ),
     // Placeholder for console routes

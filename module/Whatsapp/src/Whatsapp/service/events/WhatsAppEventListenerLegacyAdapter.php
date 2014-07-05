@@ -1,5 +1,7 @@
 <?php
-require_once 'WhatsAppEventListenerProxy.php';
+namespace Whatsapp\Service\events;
+use Whatsapp\Service\Events\WhatsAppEventListenerProxy;
+//require_once 'WhatsAppEventListenerProxy.php';
 
 /**
  * Implements the old legacy events.

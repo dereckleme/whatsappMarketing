@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>Criar Campanhas  <small>Crie Campanhas para seu público específico.</small></h1>
+</div>
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Atenção!</strong> Não esqueça de validar suas listas no menu <b>Minhas Listas</b>.
+</div> 
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Atenção!</strong> Após criada sua campanha, acesse o menu enviar campanhas para um melhor acompanhamento de seus envios.
+</div>   
+<form>
+  <fieldset>
+    <input type="text" placeholder="Digite o título da campanha" style="margin-top:10px;" class="tituloCampanha">
+    <select style="margin-top:10px;" class="listaContato">
+    	<option value="0">Selecione a lista de contatos</option>
+    	<?php 
+    		foreach($this->data AS $data)
+    		{
+    			?>
+    			<option value="<?=$data->getIdlistas()?>"><?=$data->getTitulo()?>(<?=count($data->getListaTelefones())?>)</option>
+    			<?php 
+    		}
+    	?>
+    </select> <input type="file" title="Adicionar Imagem " class="btn btn-danger"><br/>
+    <textarea class="MensagemCampanha" style="width:90%;height:200px;" placeholder="Digite a mensagem que será enviada para seu contato."></textarea><br/>
+    <button type="submit" class="btn btn-primary actionCriarCampanha">Criar Campanha</button>
+  </fieldset>
+</form>           

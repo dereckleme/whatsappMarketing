@@ -50,3 +50,6 @@ body {
 #menu_footer{  width: 1024px; margin: 0 auto; }
 ul.mn_footer{ text-align: center}
 ul.mn_footer li {display: inline-table; padding: 10px 5px;  }
+div#popup-login { width: 100%; height: 100%; z-index: 9999; top: 0; left: 0; position: fixed; background: rgba(0,0,0,0.9); display: none; float: left;}
+div#popup-login span { width: 200px; height: 50px; position: relative; left: 50%; margin: 20% 0 0 -100px; text-align: center; float: left;}
+div#popup-login span p { color: #FFFFFF; font-weight: bold; margin-top: 15px;}

@@ -1,5 +1,5 @@
 <?php
-
+namespace Whatsapp\Service;
 /**
  * Media uploader class
  */

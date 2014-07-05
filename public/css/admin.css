@@ -1,0 +1,150 @@
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+	font-family:'Arial', Helvetica, sans-serif;
+	color:#222;
+}
+
+#adm-popup {
+		display:none;
+		background-color:cinze;
+		border:1px solid rgba(0,0,0,0.2);
+		margin: 5px 0px 5px 0px;
+		padding:5px;
+	}
+
+#adm-popup h4 {
+		color:#079ab1;
+	}
+
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin input[type="text"],.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+#adm-popup { width: 926px; float: left;}
+ 
+/*gerenciar banner*/
+.style-adicionar, .style-gerenciar { font-family:'Arial', Helvetica, sans-serif; font-size: 13px}
+.style-adicionar { background: url(.././img/admin/icon-adicionar.png)  no-repeat left #30ab00; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px;}
+.style-gerenciar { background: url(.././img/admin/icon-gerenciar.png)  no-repeat left #079ab1; border: none; color:#fff; padding: 7px 15px; font-weight: bolder; text-indent:20px;}
+
+/*gerenciar produto*/
+input.style-tamanho { width: 95px; margin-top: 5px}
+input.style-cor { width: 70px; height: 30px}
+label.cor-predominante { margin-bottom: 5px;}
+
+/*gerenciar tecnologia*/
+.formTecnologia { position: relative; padding-bottom: 40px;}
+.formTecnologia textarea { width: 300px;}
+.formTecnologia span { width: 460px; position: absolute; right: 0; top: -30px;}
+.formTecnologia span label, .formTecnologia span input { margin-left: 10px;}
+input[type="radio"] { margin: -4px 0 0;}
+
+/*gerenciar tecnologia*/
+.formProduto { position: relative; float: left;}
+span.g-categorias { width: 460px; max-height: 620px; overflow-x: hidden; display: block; float: right; margin-top: -40px;} 
+span.g-categorias h5 { color: #079AB1; font-weight: bold; font-size: 20px;}
+span.g-categorias ul.box-produto { margin-left: 15px;}
+span.g-categorias ul.box-produto li.tt-produto { color: #079AB1;}
+span.g-categorias ul.box-produto li a.tt-produto { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #D72523; margin-left: 40px;}
+span.g-categorias ul.box-produto ul { border-left: solid 1px #14c6e2;; margin: 10px 0 10px 10px;}
+span.g-categorias ul.box-produto ul li { font-size: 13px; color: #333333; margin: 4px 0 4px 0;}
+span.g-categorias ul.box-produto ul li:before { content: '\2212'; color: #14c6e2;}
+span.g-categorias ul.box-produto ul li a { border-radius: 5px; font-size: 9px; padding: 3px; color: #FFFFFF; background: #e66700; margin-left: 40px;}
+
+.salvarCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; color: #FFFFFF; background: #D72523;}
+.salvarSubCategoriaProduto { margin: -10px 0 0 10px; border-radius: 5px; padding: 4px; border: none; background: #e66700; color: #FFFFFF;}
+.formProduto textarea { width: 250px; height: 150px;}
+.formProduto input.modelo { width: 250px;}
+
+/*gerenciar produtos cadastrados*/
+div.accordion { margin-top: 20px; float: left;}
+div.accordion p { font-size: 18px; color: #14c6e2; font-weight: bold;}
+div.accordion button { width: 66px; border-radius: 5px; float: left;}
+div.accordion-group { border-color: #14c6e2;}
+div.accordion-heading { background: #079AB1;}
+div.accordion-group a { font-weight: bold; color: #FFFFFF;}
+div.accordion-inner { float: left; position: relative; padding: 0; margin: 0;}
+
+ul.accordion-produto, ul.accordion-wallpaper { width: 900px; margin: 0; padding: 0 0 0 26px; float: left;}
+ul.accordion-midia, ul.accordion-comprar, ul.accordion-tec { width: 925px; margin: 0; padding: 0; float: left;}
+ul.accordion-produto li, ul.accordion-banner li, ul.accordion-wallpaper li { float: left; display: block; margin: 12.5px 25px 12.5px 0; border: solid 1px #14c6e2; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+ul.accordion-produto li p, ul.accordion-wallpaper li p { font-size: 14px; display: block; float: left; color: #333333;}
+ul.accordion-tec li span, ul.accordion-comprar li span, ul.accordion-midia li span { text-indent: 40px; float: left; color: #333333; margin-left: 15px; font-weight: bold;}
+ul.accordion-midia li:last-child, ul.accordion-comprar li:last-child, ul.accordion-tec li:last-child { border-bottom: none;}
+ul.accordion-midia li, ul.accordion-comprar li, ul.accordion-tec li { width: 926px; border-bottom: solid 1px #14c6e2; height: 40px; margin: 5px 0 5px 0; float: left; position: relative;}
+ul.accordion-tec li button, ul.accordion-comprar li button, ul.accordion-midia li button { margin: 1px 0 0 25px;}
+ul.accordion-produto li p, ul.accordion-wallpaper li p { width: 185px; margin: 5px 0 5px 10px;}
+
+ul.accordion-produto li { width: 200px; height: 270px; padding-bottom: 10px;}
+ul.accordion-produto li img { width: 180px; height: 150px; margin: 10px 0 0 8px; border: solid 1px #DDDDDD;}
+ul.accordion-produto li button { margin: 6px 0 0 10px;}
+ul.accordion-produto li button.AddCor { width: 90px; float: right; margin-right: 10px;}
+
+ul.accordion-banner { width: 875px; margin: 0; padding: 0 0 0 50px; float: left;}
+ul.accordion-banner li { width: 400px; height: 310px;}
+ul.accordion-banner li img { width: 350px; height: 200px; margin: 23px 0 0 23px;}
+ul.accordion-banner li p { width: 350px; margin: 5px 0 5px 23px;}
+ul.accordion-banner li button { margin: 6px 0 0 23px;}
+
+ul.accordion-wallpaper li { width: 200px; height: 250px; padding-bottom: 10px;}
+ul.accordion-wallpaper li img { width: 180px; height: 150px; margin: 10px 0 0 8px;}
+ul.accordion-wallpaper li button { margin: 6px 0 0 10px;}
+
+ul.accordion-midia li span { background: url(.././img/youtube-adm.png) no-repeat scroll 0 5px; padding: 5px 0 10px 0;}
+ul.accordion-comprar li span { background: url(.././img/comprar-adm.png) no-repeat scroll 0 5px; padding: 8px 0 10px 0;}
+ul.accordion-tec li span { background: url(.././img/tecnologia-adm.png) no-repeat scroll 0 1px; padding: 5px 0 10px 0;}
+.accordion { display:none;}
+
+div#popup-login { width: 100%; height: 100%; z-index: 9999; top: 0; left: 0; position: fixed; background: rgba(0,0,0,0.9); display: none; float: left;}
+div#popup-login span { width: 200px; height: 50px; position: relative; left: 50%; margin: 20% 0 0 -100px; text-align: center; float: left;}
+div#popup-login span p { color: #FFFFFF; font-weight: bold; margin-top: 15px;}
+
+div#adm-news { width: 700px; float: left; position: relative; left: 50%; margin: 0 0 5px -350px; border: solid 1px #dddddd; padding: 10px;}
+div#adm-news div { width: 500px; max-height: 500px; position: relative;  float: left; overflow-x: hidden;}
+div#adm-news div ul { position: relative; float: left; margin: 0; padding: 0;}
+div#adm-news div ul li { width: 480px; height: 26px; float: left; line-height: normal; padding: 0; margin: 0;}
+div#adm-news div ul li p { width: 420px; font-size: 14px; padding: 5px 0 5px 0; color: #333333; float: left;}
+div#adm-news div ul li p span.txt-email { width: 305px; float: left; overflow: hidden;}
+div#adm-news div ul li p span.data-email { float: right;}
+div#adm-news div ul li a { margin-top: 5px; float: right; margin-right: 20px; border-radius: 5px; font-size: 9px; padding: 2px; color: #FFFFFF; background: #D72523;}
+div#adm-news button { width: 150px; height: 40px; position: absolute; right: 30px; bottom: 3px; font-size: 17px; color: #FFFFFF; border-radius: 5px; background: #e66700; border: none;}
+
+span.bannerEsquerdo { float: left;}
+span.bannerDireto { float: right; display: block; position: relative; top: -40px; border-left: 1px solid rgba(0, 0, 0, 0.2); padding-left: 60px; margin-right: 60px;}
+span.bannerDireto img { width: 340px; height: 200px;}
+
+/* Hack ie10 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+   div.container { 
+   	width: 970px !important;
+   }
+
+   #adm-popup { 
+   	width: 956px; float: left;
+   }
+
+}

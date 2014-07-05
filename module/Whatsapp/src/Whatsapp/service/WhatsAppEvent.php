@@ -1,7 +1,9 @@
 <?php
 namespace Whatsapp\Service;
-require_once dirname(__FILE__).'/events/WhatsAppEventListener.php';
-require_once dirname(__FILE__).'/events/WhatsAppEventListenerLegacyAdapter.php';
+use Whatsapp\Service\events\WhatsAppEventListener;
+use Whatsapp\Service\events\WhatsAppEventListenerLegacyAdapter;
+//require_once dirname(__FILE__).'/events/WhatsAppEventListener.php';
+//require_once dirname(__FILE__).'/events/WhatsAppEventListenerLegacyAdapter.php';
 
 /**
  * @file

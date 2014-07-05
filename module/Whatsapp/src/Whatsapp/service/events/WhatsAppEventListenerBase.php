@@ -1,5 +1,7 @@
 <?php
-require_once 'WhatsAppEventListener.php';
+namespace Whatsapp\Service\events;
+use Whatsapp\Service\events\WhatsAppEventListener;
+//require_once 'WhatsAppEventListener.php';
 
 /**
  * Empty implementation of WhatsAppEventListener. See that class for documentation.
